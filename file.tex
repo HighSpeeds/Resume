@@ -1,0 +1,199 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.9\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Lawrence Liu} \\ \vspace{1pt}
+    \small (650) 796-4234 $|$ \href{lawrencerliu@ucla.edu}{\underline{lawrencerliu@ucla.edu}} $|$ 
+    \href{https://www.linkedin.com/in/lawrencerliu/}{\underline{linkedin.com/in/lawrencerliu}} $|$
+    \href{https://github.com/HighSpeeds}{\underline{github.com/HighSpeeds}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Los Angeles (UCLA)}{Los Angeles, CA}
+      {Bachelor of Science in Electrical Engineering}{June 2024 (Expected)}
+      \resumeItemListStart
+      \resumeItem{GPA: 3.754/4.0}
+      \resumeItem{Relevant coursework: Circuits, Signals and Systems, Digital Signal Processing, Data Structures and Algorithms, Feedback Control Systems, Information Theory (Graduate Level), Decision Making in Stochastic Systems (Graduate Level)}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------Research EXPERIENCE-----------
+\section{Research Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Undergraduate Research Assistant}{June 2020 -- Present}
+      {Complex Networks Group at UCLA, under supervision of Prof. Vwani Roychowdhury}{Los Angeles, CA}
+      \resumeSubSubheading{Unsupervised Seizure EEG Biomarker Discovery}{}
+      \resumeItemListStart
+        \resumeItem{Worked with graduate students and proposed a novel unsupervised approach using a Variational Autoencoder (VAE)}
+        \resumeItem{Designed and implemented a novel self-supervised learning (VAE) in Pytorch based on CNN to successfully distill a seizure-related biomarker (high-frequency oscillations) from brain EEG signal}
+        \resumeItem{Developed data visualization modules to interpret the performance of the network using GMM, K-means, T-SNE, and PCA}
+        \resumeItem{The biomarker was used to predict the seizure surgery outcome and outperforms expert Neurologists}
+        \resumeItem{This project is in the procedure of paper submission}
+      \resumeItemListEnd
+      \resumeSubSubheading{Open Source HFO Detector}{}
+      \resumeItemListStart
+        \resumeItem{Created an open source package for automatic brain signal biomarker detection, in Python}
+        \resumeItem{Optimize the pipeline so that it exceed the previous implementation by 10 times (1000\%) though introducing multi-processing and vectorization}
+        \resumeItem{Lead a group of team members and help them to debug and deploy the implementation}
+        \resumeItem{In the procedure of publishing the completed modules to pip}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+\section{Experience}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+      {Internal Vice President}{June 2022 -- Present}
+      {Linux Users Group at UCLA}{}
+      \resumeItemListStart
+        \resumeItem{Managed the Linux Users Group servers as a system administrator, including managing member websites and maintaining our general website}
+        \resumeItem{Led installfests to help 20+ students install Linux on their computers}
+        \resumeItem{Created a AI chatbot with Python and Hugging Face to interact with members on our Discord server through the Discord API}
+        \resumeItem{In the process of installing Linux From Scratch on an old Mac with the aim of developing 
+        a Linux Distribution for the Linux Users Group at UCLA}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C/C++, R, Matlab, Octave, Julia, Mathematica} \\
+     \textbf{Tools}{: Git, Bash Scripting, Pytorch, Sklearn, Tensorflow, Pandas, NumPy, Matplotlib, Simulink} \\
+     \textbf{Operating Systems}{: Windows, Mac OS, Linux (Arch Linux, Debian, Linux From Scratch)}\\
+     \textbf{Shop Skills}{: Soldering, PCB design, 3D printing}\\
+     \textbf{Other}{: Microsoft Office, PID Tuning}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
